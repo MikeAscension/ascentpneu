@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /googleec180b5b531d63cd.html
+
+Sitemap: https://www.ascentpneu.com/sitemap.xml
