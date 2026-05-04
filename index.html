@@ -6,9 +6,14 @@
   <title>ASCENT PNEU | Export pneus usagés — Collecté en France, livré au monde</title>
   <meta name="description" content="ASCENT PNEU exporte des pneus usagés triés depuis la France vers les négociants internationaux. Tourisme, utilitaire, poids lourd. Partenaire Aliapur. Demandez un devis.">
   <meta name="keywords" content="pneus usagés export, pneumatiques occasion exportation, used tyres export France, pneus usagés vrac, Aliapur, pneus tourisme utilitaire poids lourd">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="canonical" href="https://www.ascentpneu.com/">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <link rel="apple-touch-icon" href="logo.png">
+
+  <!-- Geo -->
+  <meta name="geo.region" content="FR">
+  <meta name="geo.placename" content="France">
 
   <!-- Hreflang -->
   <link rel="alternate" hreflang="fr" href="https://www.ascentpneu.com/">
@@ -26,7 +31,7 @@
   <meta property="og:locale:alternate" content="en_GB">
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="ASCENT PNEU | Export pneus usagés — France">
   <meta name="twitter:description" content="Pneus usagés triés, exportés depuis la France. Tourisme, utilitaire, poids lourd. Partenaire Aliapur.">
   <meta name="twitter:image" content="https://www.ascentpneu.com/logo.png">
@@ -60,6 +65,41 @@
       }
     ],
     "knowsAbout": ["pneus usagés", "export pneumatiques", "used tyres", "Aliapur"]
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quel est le volume minimum de commande ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Un conteneur 20 pieds minimum. Nous pouvons fournir plusieurs conteneurs par mois selon les volumes disponibles et la demande." }
+      },
+      {
+        "@type": "Question",
+        "name": "Les pneus sont-ils certifiés et traçables ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Oui. Tous nos pneus sont sourcés via les sous-traitants agréés Aliapur, l'éco-organisme national français. Chaque lot est traçable et accompagné de la documentation réglementaire complète." }
+      },
+      {
+        "@type": "Question",
+        "name": "Quels documents export sont fournis avec chaque conteneur ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Chaque conteneur est livré avec un connaissement (Bill of Lading), une liste de colisage, un certificat d'origine et les documents douaniers adaptés au pays de destination." }
+      },
+      {
+        "@type": "Question",
+        "name": "Quels sont les grades de qualité disponibles ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nous proposons trois grades : Grade A (profondeur ≥ 5 mm, excellent état), Grade B (3–5 mm, marques mineures) et Grade C (2–3 mm, usure visible). Chaque grade est adapté à un marché de revente spécifique." }
+      },
+      {
+        "@type": "Question",
+        "name": "Quel est le délai de réponse après une demande de devis ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nous répondons à toutes les demandes de devis sous 24 à 48 heures ouvrées avec une proposition commerciale personnalisée." }
+      }
+    ]
   }
   </script>
 
@@ -909,6 +949,244 @@
     @media (max-width: 480px) {
       .hero-content h1 { font-size: 32px; }
     }
+
+    /* ── Hero badges ───────────────────────────────────── */
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      background: rgba(242,228,200,0.12);
+      border: 1px solid rgba(242,228,200,0.3);
+      color: rgba(255,255,255,0.82);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── Nav CTA ────────────────────────────────────────── */
+    .nav-cta {
+      display: inline-block;
+      background: var(--beige);
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 10px 18px;
+      border: 2px solid transparent;
+      transition: background 0.15s, border-color 0.15s;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { background: var(--white); border-color: var(--beige); }
+
+    /* ── Quality table ──────────────────────────────────── */
+    .table-wrap { overflow-x: auto; border: 1px solid var(--border); }
+    .grade-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+    .grade-table thead tr { background: var(--navy); }
+    .grade-table th {
+      padding: 16px 20px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-align: left;
+      color: var(--white);
+    }
+    .grade-table th.th-a { color: var(--beige); }
+    .grade-table th.th-b { color: rgba(255,255,255,0.65); }
+    .grade-table th.th-c { color: rgba(255,255,255,0.4); }
+    .grade-table td {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      line-height: 1.45;
+      color: var(--muted);
+    }
+    .grade-table td.lbl { font-weight: 600; color: var(--navy); }
+    .grade-table tbody tr:nth-child(even) td { background: var(--cream); }
+    .grade-table tbody tr:last-child td { border-bottom: none; }
+
+    /* ── Markets ────────────────────────────────────────── */
+    .markets-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--border);
+    }
+    .market-block {
+      padding: 32px 28px;
+      border-right: 1px solid var(--border);
+    }
+    .market-block:last-child { border-right: none; }
+    .market-region {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--blue);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--beige);
+    }
+    .market-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .market-list li {
+      font-size: 14px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .market-list li::before {
+      content: '';
+      display: block;
+      width: 4px;
+      height: 4px;
+      background: var(--blue);
+      flex-shrink: 0;
+    }
+
+    /* ── FAQ ─────────────────────────────────────────────── */
+    .faq-list { max-width: 780px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 22px 0;
+      text-align: left;
+      font-family: 'Sora', sans-serif;
+    }
+    .faq-q-text {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1.4;
+    }
+    .faq-icon { flex-shrink: 0; color: var(--blue); transition: transform 0.25s; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-a {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--muted);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding-bottom 0.3s;
+    }
+    .faq-item.open .faq-a { max-height: 400px; padding-bottom: 20px; }
+
+    /* ── Floating pill ──────────────────────────────────── */
+    .cta-pill {
+      position: fixed;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 150;
+      background: var(--navy);
+      color: var(--white);
+      padding: 10px 12px 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 6px 24px rgba(10,31,80,0.3);
+      white-space: nowrap;
+      transition: opacity 0.3s;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+    .cta-pill.hidden { opacity: 0; pointer-events: none; }
+    .pill-dot { width: 6px; height: 6px; background: var(--beige); flex-shrink: 0; animation: blink 2s infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.25} }
+    .pill-cta {
+      background: var(--beige);
+      color: var(--navy);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 8px 16px;
+      transition: background 0.15s;
+    }
+    .pill-cta:hover { background: var(--white); }
+
+    /* ── Mobile bar ─────────────────────────────────────── */
+    .mobile-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 150;
+      background: rgba(255,255,255,0.97);
+      border-top: 1px solid var(--border);
+      padding: 10px 20px;
+    }
+    .mobile-bar a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 14px;
+      background: var(--beige);
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    .mobile-bar a:hover { background: var(--white); }
+
+    /* ── WhatsApp button ────────────────────────────────── */
+    .wa-btn {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      z-index: 160;
+      width: 54px;
+      height: 54px;
+      background: #25D366;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(37,211,102,0.4);
+      transition: transform 0.2s;
+      text-decoration: none;
+    }
+    .wa-btn:hover { transform: scale(1.08); }
+
+    @media (max-width: 768px) {
+      .cta-pill { display: none !important; }
+      .mobile-bar { display: block; }
+      footer { padding-bottom: 72px; }
+      .wa-btn { bottom: 76px; right: 16px; width: 48px; height: 48px; }
+      .markets-grid { grid-template-columns: 1fr 1fr; }
+      .market-block { border-bottom: 1px solid var(--border); }
+      .market-block:nth-child(2n) { border-right: none; }
+    }
+    @media (max-width: 480px) {
+      .markets-grid { grid-template-columns: 1fr; }
+      .market-block { border-right: none; }
+    }
   </style>
 </head>
 
@@ -929,9 +1207,17 @@
               <span class="fr">Offre</span>
               <span class="en">Offer</span>
             </a>
+            <a href="#qualite">
+              <span class="fr">Qualité</span>
+              <span class="en">Quality</span>
+            </a>
             <a href="#comment">
-              <span class="fr">Comment ça marche</span>
-              <span class="en">How it works</span>
+              <span class="fr">Processus</span>
+              <span class="en">Process</span>
+            </a>
+            <a href="#marches">
+              <span class="fr">Marchés</span>
+              <span class="en">Markets</span>
             </a>
             <a href="#contact">Contact</a>
           </nav>
@@ -941,6 +1227,10 @@
             <span class="sep" aria-hidden="true">|</span>
             <button class="lang-btn" data-lang="en" aria-label="English version">EN</button>
           </div>
+          <a href="#contact" class="nav-cta">
+            <span class="fr">Devis</span>
+            <span class="en">Quote</span>
+          </a>
         </div>
 
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Ouvrir le menu">
@@ -960,8 +1250,14 @@
         <a href="#offre" class="mobile-link">
           <span class="fr">Offre</span><span class="en">Offer</span>
         </a>
+        <a href="#qualite" class="mobile-link">
+          <span class="fr">Qualité</span><span class="en">Quality</span>
+        </a>
         <a href="#comment" class="mobile-link">
-          <span class="fr">Comment ça marche</span><span class="en">How it works</span>
+          <span class="fr">Processus</span><span class="en">Process</span>
+        </a>
+        <a href="#marches" class="mobile-link">
+          <span class="fr">Marchés</span><span class="en">Markets</span>
         </a>
         <a href="#contact" class="mobile-link">Contact</a>
       </nav>
@@ -994,10 +1290,38 @@
             international traders. Passenger, light commercial, and heavy-duty — packaged to
             your specifications.
           </p>
-          <a href="#contact" class="btn-primary">
-            <span class="fr">Demander un devis</span>
-            <span class="en">Request a quote</span>
-          </a>
+          <div class="hero-cta-row">
+            <a href="#contact" class="btn-primary">
+              <span class="fr">Demander un devis</span>
+              <span class="en">Request a quote</span>
+            </a>
+            <a href="#offre" class="btn-secondary">
+              <span class="fr">Voir l'offre</span>
+              <span class="en">View products</span>
+            </a>
+          </div>
+          <div class="hero-badges">
+            <span class="hero-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span class="fr">Réponse sous 48h</span>
+              <span class="en">Response within 48h</span>
+            </span>
+            <span class="hero-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span class="fr">Certifié Aliapur</span>
+              <span class="en">Aliapur certified</span>
+            </span>
+            <span class="hero-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              <span class="fr">Conteneur 20' ou 40'</span>
+              <span class="en">20' or 40' container</span>
+            </span>
+            <span class="hero-badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <span class="fr">Docs export inclus</span>
+              <span class="en">Export docs included</span>
+            </span>
+          </div>
         </div>
 
         <div class="hero-visual" aria-hidden="true">
@@ -1168,6 +1492,129 @@
   </section>
 
 
+  <!-- ═══════════════════════════════ QUALITY ════════════════════════════════ -->
+  <section id="qualite" class="section section-white" aria-labelledby="qualite-heading">
+    <div class="container">
+
+      <div class="section-tag">
+        <span class="fr">Protocoles de tri</span>
+        <span class="en">Sorting protocols</span>
+      </div>
+
+      <h2 class="section-title" id="qualite-heading">
+        <span class="fr">Nos niveaux de qualité.</span>
+        <span class="en">Our quality grades.</span>
+      </h2>
+
+      <p class="offer-intro fr">
+        Chaque pneu est inspecté et classé manuellement. Trois grades distincts pour correspondre précisément à chaque marché de destination.
+      </p>
+      <p class="offer-intro en">
+        Every tyre is manually inspected and graded. Three distinct grades to precisely match each destination market.
+      </p>
+
+      <div class="table-wrap">
+        <table class="grade-table">
+          <thead>
+            <tr>
+              <th>
+                <span class="fr">Caractéristique</span>
+                <span class="en">Characteristic</span>
+              </th>
+              <th class="th-a">Grade A</th>
+              <th class="th-b">Grade B</th>
+              <th class="th-c">Grade C</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="lbl">
+                <span class="fr">Profondeur de gomme</span>
+                <span class="en">Tread depth</span>
+              </td>
+              <td>≥ 5 mm</td>
+              <td>3 – 5 mm</td>
+              <td>2 – 3 mm</td>
+            </tr>
+            <tr>
+              <td class="lbl">
+                <span class="fr">État visuel</span>
+                <span class="en">Visual condition</span>
+              </td>
+              <td>
+                <span class="fr">Excellent — comme neuf</span>
+                <span class="en">Excellent — like new</span>
+              </td>
+              <td>
+                <span class="fr">Marques mineures</span>
+                <span class="en">Minor surface marks</span>
+              </td>
+              <td>
+                <span class="fr">Usure visible</span>
+                <span class="en">Visible wear</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="lbl">
+                <span class="fr">Traçabilité</span>
+                <span class="en">Traceability</span>
+              </td>
+              <td>
+                <span class="fr">Certifié Aliapur</span>
+                <span class="en">Aliapur certified</span>
+              </td>
+              <td>
+                <span class="fr">Certifié Aliapur</span>
+                <span class="en">Aliapur certified</span>
+              </td>
+              <td>
+                <span class="fr">Certifié Aliapur</span>
+                <span class="en">Aliapur certified</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="lbl">
+                <span class="fr">Marchés adaptés</span>
+                <span class="en">Target markets</span>
+              </td>
+              <td>
+                <span class="fr">Revente premium</span>
+                <span class="en">Premium resale</span>
+              </td>
+              <td>
+                <span class="fr">Afrique · Europe de l'Est</span>
+                <span class="en">Africa · Eastern Europe</span>
+              </td>
+              <td>
+                <span class="fr">Export économique</span>
+                <span class="en">Budget export</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="lbl">
+                <span class="fr">Documentation</span>
+                <span class="en">Documentation</span>
+              </td>
+              <td>
+                <span class="fr">Incluse</span>
+                <span class="en">Included</span>
+              </td>
+              <td>
+                <span class="fr">Incluse</span>
+                <span class="en">Included</span>
+              </td>
+              <td>
+                <span class="fr">Incluse</span>
+                <span class="en">Included</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+
   <!-- ══════════════════════════════ HOW IT WORKS ═══════════════════════════ -->
   <section id="comment" class="section section-white" aria-labelledby="comment-heading">
     <div class="container">
@@ -1210,6 +1657,73 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════ MARKETS ════════════════════════════════ -->
+  <section id="marches" class="section section-cream" aria-labelledby="marches-heading">
+    <div class="container">
+
+      <div class="section-tag">
+        <span class="fr">Zones desservies</span>
+        <span class="en">Coverage areas</span>
+      </div>
+
+      <h2 class="section-title" id="marches-heading">
+        <span class="fr">Marchés desservis.</span>
+        <span class="en">Markets we serve.</span>
+      </h2>
+
+      <div class="markets-grid">
+        <div class="market-block">
+          <h4 class="market-region">
+            <span class="fr">Europe de l'Est</span>
+            <span class="en">Eastern Europe</span>
+          </h4>
+          <ul class="market-list">
+            <li><span class="fr">Hongrie</span><span class="en">Hungary</span></li>
+            <li><span class="fr">Pologne</span><span class="en">Poland</span></li>
+            <li><span class="fr">Roumanie</span><span class="en">Romania</span></li>
+          </ul>
+        </div>
+        <div class="market-block">
+          <h4 class="market-region">
+            <span class="fr">Afrique de l'Ouest</span>
+            <span class="en">West Africa</span>
+          </h4>
+          <ul class="market-list">
+            <li><span class="fr">Bénin</span><span class="en">Benin</span></li>
+            <li><span class="fr">Côte d'Ivoire</span><span class="en">Ivory Coast</span></li>
+            <li>Ghana</li>
+            <li>Mali</li>
+            <li>Nigeria</li>
+            <li><span class="fr">Sénégal</span><span class="en">Senegal</span></li>
+            <li>Togo</li>
+          </ul>
+        </div>
+        <div class="market-block">
+          <h4 class="market-region">
+            <span class="fr">Afrique Centrale</span>
+            <span class="en">Central Africa</span>
+          </h4>
+          <ul class="market-list">
+            <li>Cameroun</li>
+            <li>Congo</li>
+            <li>Gabon</li>
+            <li>Madagascar</li>
+          </ul>
+        </div>
+        <div class="market-block">
+          <h4 class="market-region">
+            <span class="fr">Moyen-Orient · Asie</span>
+            <span class="en">Middle East · Asia</span>
+          </h4>
+          <ul class="market-list">
+            <li><span class="fr">Sur demande</span><span class="en">On request</span></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -1299,6 +1813,107 @@
         <span><strong>www.ascentpneu.com</strong></span>
       </div>
 
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════ FAQ ════════════════════════════════════ -->
+  <section id="faq" class="section section-white" aria-labelledby="faq-heading">
+    <div class="container">
+
+      <h2 class="section-title-center" id="faq-heading">
+        <span class="fr">Questions fréquentes</span>
+        <span class="en">Frequently asked questions</span>
+      </h2>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span class="faq-q-text">
+              <span class="fr">Quel est le volume minimum de commande ?</span>
+              <span class="en">What is the minimum order volume?</span>
+            </span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="2"/>
+              <line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </button>
+          <div class="faq-a">
+            <p class="fr">Un conteneur 20 pieds minimum. Nous pouvons fournir plusieurs conteneurs par mois selon les volumes disponibles et la demande.</p>
+            <p class="en">One 20-foot container minimum. We can supply multiple containers per month depending on available stock and demand.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span class="faq-q-text">
+              <span class="fr">Les pneus sont-ils certifiés et traçables ?</span>
+              <span class="en">Are the tyres certified and traceable?</span>
+            </span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="2"/>
+              <line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </button>
+          <div class="faq-a">
+            <p class="fr">Oui. Tous nos pneus sont sourcés via les sous-traitants agréés Aliapur, l'éco-organisme national français de gestion des pneus usagés. Chaque lot est traçable et accompagné de la documentation réglementaire complète.</p>
+            <p class="en">Yes. All our tyres are sourced through Aliapur-approved subcontractors, France's national used-tyre management body. Every batch is fully traceable with complete regulatory documentation.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span class="faq-q-text">
+              <span class="fr">Quels documents export sont fournis avec chaque conteneur ?</span>
+              <span class="en">What export documents are provided with each container?</span>
+            </span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="2"/>
+              <line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </button>
+          <div class="faq-a">
+            <p class="fr">Chaque conteneur est livré avec un connaissement (Bill of Lading), une liste de colisage, un certificat d'origine et les documents douaniers adaptés au pays de destination.</p>
+            <p class="en">Each container is delivered with a Bill of Lading, packing list, certificate of origin, and customs documents tailored to the destination country.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span class="faq-q-text">
+              <span class="fr">Quels sont les grades de qualité disponibles ?</span>
+              <span class="en">What quality grades are available?</span>
+            </span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="2"/>
+              <line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </button>
+          <div class="faq-a">
+            <p class="fr">Trois grades : Grade A (profondeur ≥ 5 mm, excellent état), Grade B (3–5 mm, marques mineures) et Grade C (2–3 mm, usure visible). Chaque grade correspond à un marché de revente spécifique.</p>
+            <p class="en">Three grades: Grade A (tread ≥ 5 mm, excellent condition), Grade B (3–5 mm, minor marks) and Grade C (2–3 mm, visible wear). Each grade targets a specific resale market.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span class="faq-q-text">
+              <span class="fr">Quel est le délai de réponse après une demande de devis ?</span>
+              <span class="en">How quickly do you respond to quote requests?</span>
+            </span>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+              <line x1="10" y1="4" x2="10" y2="16" stroke="currentColor" stroke-width="2"/>
+              <line x1="4" y1="10" x2="16" y2="10" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </button>
+          <div class="faq-a">
+            <p class="fr">Nous répondons à toutes les demandes sous 24 à 48 heures ouvrées avec une proposition commerciale personnalisée adaptée à votre volume et votre marché.</p>
+            <p class="en">We respond to all quote requests within 24 to 48 business hours with a tailored commercial proposal adapted to your volume and market.</p>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -1404,6 +2019,13 @@
             </div>
 
             <div class="form-group">
+              <label class="form-label fr" for="phone">Téléphone / WhatsApp</label>
+              <label class="form-label en" for="phone">Phone / WhatsApp</label>
+              <input class="form-input" id="phone" type="tel" name="telephone"
+                     placeholder="+221 77 000 00 00">
+            </div>
+
+            <div class="form-group">
               <label class="form-label fr" for="message">Message</label>
               <label class="form-label en" for="message">Message</label>
               <textarea class="form-textarea" id="message" name="message" required
@@ -1499,6 +2121,34 @@
   </footer>
 
 
+  <!-- Floating pill (desktop) -->
+  <div class="cta-pill hidden" id="ctaPill" aria-hidden="true">
+    <span class="pill-dot"></span>
+    <span class="fr">Besoin d'un devis ?</span>
+    <span class="en">Need a quote?</span>
+    <a href="#contact" class="pill-cta">
+      <span class="fr">Demander</span>
+      <span class="en">Request</span>
+    </a>
+  </div>
+
+  <!-- Mobile sticky bar -->
+  <div class="mobile-bar" id="mobileBar">
+    <a href="#contact">
+      <span class="fr">Demander un devis</span>
+      <span class="en">Request a quote</span>
+    </a>
+  </div>
+
+  <!-- WhatsApp button -->
+  <a href="https://wa.me/33674040944" target="_blank" rel="noopener noreferrer"
+     class="wa-btn" aria-label="WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.117 1.532 5.845L.057 23.985l6.304-1.65A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.004-1.371l-.359-.214-3.72.974.993-3.617-.235-.372A9.818 9.818 0 0 1 2.182 12C2.182 6.573 6.573 2.182 12 2.182S21.818 6.573 21.818 12 17.427 21.818 12 21.818z"/>
+    </svg>
+  </a>
+
   <!-- ════════════════════════════════ SCRIPTS ══════════════════════════════ -->
   <script>
     /* ── Language switching ──────────────────────────────────── */
@@ -1582,16 +2232,53 @@
 
     /* ── Navbar shadow on scroll ─────────────────────────────── */
     const navbar = document.getElementById('navbar');
-    let lastScroll = 0;
     window.addEventListener('scroll', () => {
-      const y = window.scrollY;
-      if (y > 8) {
-        navbar.style.boxShadow = '0 2px 12px rgba(10,31,80,0.08)';
-      } else {
-        navbar.style.boxShadow = 'none';
-      }
-      lastScroll = y;
+      navbar.style.boxShadow = window.scrollY > 8 ? '0 2px 12px rgba(10,31,80,0.08)' : 'none';
     }, { passive: true });
+
+
+    /* ── FAQ accordion ───────────────────────────────────────── */
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(el => {
+          el.classList.remove('open');
+          el.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+
+    /* ── Floating pill + mobile bar visibility ───────────────── */
+    const ctaPill   = document.getElementById('ctaPill');
+    const mobileBar = document.getElementById('mobileBar');
+    const contactSection = document.getElementById('contact');
+
+    function showPill(show) {
+      if (ctaPill)   ctaPill.classList.toggle('hidden', !show);
+    }
+
+    // Show pill after scrolling past hero, hide near contact
+    const heroSection = document.getElementById('hero');
+    if (heroSection && contactSection) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.target === heroSection) {
+            showPill(!entry.isIntersecting);
+          }
+          if (entry.target === contactSection) {
+            showPill(!entry.isIntersecting);
+          }
+        });
+      }, { threshold: 0.1 });
+      observer.observe(heroSection);
+      observer.observe(contactSection);
+    }
   </script>
 
 </body>
