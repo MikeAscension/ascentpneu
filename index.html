@@ -745,6 +745,13 @@
       color: var(--muted);
       margin-bottom: 6px;
     }
+    .req { color: var(--blue); font-weight: 700; }
+    .form-legend {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 4px;
+      margin-bottom: 20px;
+    }
 
     .form-input,
     .form-textarea,
@@ -2006,19 +2013,23 @@
             <span class="fr">Demande de devis</span>
             <span class="en">Quote request</span>
           </h3>
+          <p class="form-legend">
+            <span class="fr"><span class="req">*</span> Champs obligatoires</span>
+            <span class="en"><span class="req">*</span> Required fields</span>
+          </p>
 
           <form id="contactForm" action="https://formspree.io/f/xkoyrqop" method="POST" novalidate>
 
             <div class="form-row">
               <div class="form-group">
-                <label class="form-label fr" for="name">Nom complet</label>
-                <label class="form-label en" for="name">Full name</label>
+                <label class="form-label fr" for="name">Nom complet <span class="req">*</span></label>
+                <label class="form-label en" for="name">Full name <span class="req">*</span></label>
                 <input class="form-input" id="name" type="text" name="name" required
                        placeholder="Jean Dupont">
               </div>
               <div class="form-group">
-                <label class="form-label fr" for="company">Entreprise</label>
-                <label class="form-label en" for="company">Company</label>
+                <label class="form-label fr" for="company">Entreprise <span class="req">*</span></label>
+                <label class="form-label en" for="company">Company <span class="req">*</span></label>
                 <input class="form-input" id="company" type="text" name="company" required
                        placeholder="Acme Trading Ltd">
               </div>
@@ -2026,14 +2037,14 @@
 
             <div class="form-row">
               <div class="form-group">
-                <label class="form-label fr" for="country">Pays</label>
-                <label class="form-label en" for="country">Country</label>
+                <label class="form-label fr" for="country">Pays <span class="req">*</span></label>
+                <label class="form-label en" for="country">Country <span class="req">*</span></label>
                 <input class="form-input" id="country" type="text" name="country" required
                        placeholder="Sénégal">
               </div>
               <div class="form-group">
-                <label class="form-label fr" for="email">Email professionnel</label>
-                <label class="form-label en" for="email">Business email</label>
+                <label class="form-label fr" for="email">Email professionnel <span class="req">*</span></label>
+                <label class="form-label en" for="email">Business email <span class="req">*</span></label>
                 <input class="form-input" id="email" type="email" name="email" required
                        placeholder="jean@acme.com">
               </div>
@@ -2047,8 +2058,8 @@
             </div>
 
             <div class="form-group">
-              <label class="form-label fr" for="message">Message</label>
-              <label class="form-label en" for="message">Message</label>
+              <label class="form-label fr" for="message">Message <span class="req">*</span></label>
+              <label class="form-label en" for="message">Message <span class="req">*</span></label>
               <textarea class="form-textarea" id="message" name="message" required
                         placeholder="Catégorie souhaitée, volumes, port de destination…"></textarea>
             </div>
