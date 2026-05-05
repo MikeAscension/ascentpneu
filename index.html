@@ -315,7 +315,8 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 64px;
-      align-items: center;
+      align-items: stretch;
+      min-height: 420px;
     }
 
     .hero-content h1 {
@@ -342,11 +343,14 @@
     /* Hero image */
     .hero-visual {
       overflow: hidden;
-      aspect-ratio: 4/3;
-      border: 1px solid rgba(255,255,255,0.15);
+      margin-right: calc(-1 * var(--gutter));
     }
     .hero-visual img {
-      filter: brightness(1.12) contrast(1.05);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: brightness(1.1) contrast(1.05);
     }
 
     /* ── STATS BAR ─────────────────────────────────────────── */
