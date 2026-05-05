@@ -339,44 +339,11 @@
       margin-bottom: 40px;
     }
 
-    /* Geometric visual — abstract tire / wheel rings */
+    /* Hero image */
     .hero-visual {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      overflow: hidden;
+      aspect-ratio: 4/3;
     }
-
-    .hero-rings {
-      position: relative;
-      width: 300px;
-      height: 300px;
-      flex-shrink: 0;
-    }
-
-    .ring {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-    }
-    .ring-outer { width: 300px; height: 300px; border: 1px solid rgba(255,255,255,0.10); }
-    .ring-mid   { width: 228px; height: 228px; border: 1px solid rgba(242,228,200,0.22); }
-    .ring-inner { width: 156px; height: 156px; border: 2px solid rgba(255,255,255,0.35); }
-    .ring-core  { width: 56px;  height: 56px;  border: 2px solid var(--beige); opacity: 0.7; }
-
-    .ring-cross {
-      position: absolute;
-      inset: 0;
-    }
-    .ring-cross::before,
-    .ring-cross::after {
-      content: '';
-      position: absolute;
-      background: rgba(255,255,255,0.06);
-    }
-    .ring-cross::before { top: 50%; left: 0; right: 0; height: 1px; transform: rotate(45deg); transform-origin: center; width: 100%; }
-    .ring-cross::after  { top: 0; bottom: 0; left: 50%; width: 1px; transform: rotate(45deg); transform-origin: center; height: 100%; }
 
     /* ── STATS BAR ─────────────────────────────────────────── */
     #stats {
@@ -471,10 +438,29 @@
       border-top: 1px solid var(--border);
       border-right: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
-      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .offer-card-img {
+      height: 200px;
+      overflow: hidden;
+      background: var(--cream);
+    }
+    .offer-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s;
+    }
+    .offer-card:hover .offer-card-img img { transform: scale(1.04); }
+    .offer-card-body {
+      padding: 28px 32px;
       display: flex;
       flex-direction: column;
       gap: 14px;
+      flex: 1;
     }
 
     .offer-card h3 {
@@ -1325,13 +1311,10 @@
         </div>
 
         <div class="hero-visual" aria-hidden="true">
-          <div class="hero-rings">
-            <div class="ring ring-outer"></div>
-            <div class="ring ring-mid"></div>
-            <div class="ring ring-inner"></div>
-            <div class="ring ring-core"></div>
-            <div class="ring-cross"></div>
-          </div>
+          <img src="images/hero-warehouse.jpg"
+               alt="Entrepôt de pneus usagés certifiés Aliapur — prêts pour l'export"
+               loading="eager" fetchpriority="high"
+               style="width:100%;height:100%;object-fit:cover;display:block;">
         </div>
 
       </div>
@@ -1398,92 +1381,110 @@
 
         <!-- Tourisme -->
         <div class="offer-card">
-          <h3>
-            <span class="fr">Tourisme</span>
-            <span class="en">Passenger</span>
-          </h3>
-          <p class="fr">
-            Pneus été et hiver pour véhicules particuliers. Inspectés individuellement,
-            triés par dimension et état, conformes aux standards d'exportation.
-          </p>
-          <p class="en">
-            Summer and winter tyres for passenger vehicles. Individually inspected,
-            sorted by size and condition, compliant with export standards.
-          </p>
-          <ul class="fr">
-            <li>Dimensions 13" à 21"</li>
-            <li>Bande de roulement ≥ 3 mm</li>
-            <li>Big-bag de 80 à 120 unités</li>
-          </ul>
-          <ul class="en">
-            <li>Sizes 13" to 21"</li>
-            <li>Tread depth ≥ 3 mm</li>
-            <li>Big-bags of 80 to 120 units</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">Grade A</span>
-            <span class="tag fr">Mixte</span>
-            <span class="tag en">Mixed</span>
+          <div class="offer-card-img">
+            <img src="images/tire-passenger.jpg"
+                 alt="Pneu tourisme d'occasion certifié Aliapur — export" loading="lazy">
+          </div>
+          <div class="offer-card-body">
+            <h3>
+              <span class="fr">Tourisme</span>
+              <span class="en">Passenger</span>
+            </h3>
+            <p class="fr">
+              Pneus été et hiver pour véhicules particuliers. Inspectés individuellement,
+              triés par dimension et état, conformes aux standards d'exportation.
+            </p>
+            <p class="en">
+              Summer and winter tyres for passenger vehicles. Individually inspected,
+              sorted by size and condition, compliant with export standards.
+            </p>
+            <ul class="fr">
+              <li>Dimensions 13" à 21"</li>
+              <li>Bande de roulement ≥ 3 mm</li>
+              <li>Big-bag de 80 à 120 unités</li>
+            </ul>
+            <ul class="en">
+              <li>Sizes 13" to 21"</li>
+              <li>Tread depth ≥ 3 mm</li>
+              <li>Big-bags of 80 to 120 units</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Grade A</span>
+              <span class="tag fr">Mixte</span>
+              <span class="tag en">Mixed</span>
+            </div>
           </div>
         </div>
 
         <!-- Utilitaire -->
         <div class="offer-card">
-          <h3>
-            <span class="fr">Utilitaire</span>
-            <span class="en">Light commercial</span>
-          </h3>
-          <p class="fr">
-            Pneumatiques pour véhicules utilitaires légers et fourgons. Haute résistance,
-            adaptés aux marchés à fort usage professionnel.
-          </p>
-          <p class="en">
-            Tyres for light commercial vehicles and vans. High durability,
-            suited to markets with intensive professional use.
-          </p>
-          <ul class="fr">
-            <li>Indices de charge C et LT</li>
-            <li>Flancs renforcés disponibles</li>
-            <li>Conditionnement en vrac ou big-bag</li>
-          </ul>
-          <ul class="en">
-            <li>C and LT load ratings</li>
-            <li>Reinforced sidewalls available</li>
-            <li>Loose or big-bag packaging</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">C-Tyres</span>
-            <span class="tag">Reinforced</span>
+          <div class="offer-card-img">
+            <img src="images/tire-lcv.jpg"
+                 alt="Pneu utilitaire léger d'occasion certifié Aliapur — export" loading="lazy">
+          </div>
+          <div class="offer-card-body">
+            <h3>
+              <span class="fr">Utilitaire</span>
+              <span class="en">Light commercial</span>
+            </h3>
+            <p class="fr">
+              Pneumatiques pour véhicules utilitaires légers et fourgons. Haute résistance,
+              adaptés aux marchés à fort usage professionnel.
+            </p>
+            <p class="en">
+              Tyres for light commercial vehicles and vans. High durability,
+              suited to markets with intensive professional use.
+            </p>
+            <ul class="fr">
+              <li>Indices de charge C et LT</li>
+              <li>Flancs renforcés disponibles</li>
+              <li>Conditionnement en vrac ou big-bag</li>
+            </ul>
+            <ul class="en">
+              <li>C and LT load ratings</li>
+              <li>Reinforced sidewalls available</li>
+              <li>Loose or big-bag packaging</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">C-Tyres</span>
+              <span class="tag">Reinforced</span>
+            </div>
           </div>
         </div>
 
         <!-- Poids lourd -->
         <div class="offer-card">
-          <h3>
-            <span class="fr">Poids lourd</span>
-            <span class="en">Heavy-duty</span>
-          </h3>
-          <p class="fr">
-            Carcasses pour poids lourds et bus, adaptées au rechapage ou à la réutilisation
-            directe. Triées par cote et état de carcasse.
-          </p>
-          <p class="en">
-            Casings for trucks and buses, suitable for retreading or direct reuse.
-            Sorted by size and casing condition.
-          </p>
-          <ul class="fr">
-            <li>Carcasses rechapables disponibles</li>
-            <li>Cotes 17.5" à 22.5"</li>
-            <li>En vrac — volumes par conteneur</li>
-          </ul>
-          <ul class="en">
-            <li>Retreadable casings available</li>
-            <li>Sizes 17.5" to 22.5"</li>
-            <li>Loose — volumes per container</li>
-          </ul>
-          <div class="tags">
-            <span class="tag">Truck</span>
-            <span class="tag">Bus</span>
+          <div class="offer-card-img">
+            <img src="images/tire-suv.jpg"
+                 alt="Pneu poids lourd d'occasion certifié Aliapur — export" loading="lazy">
+          </div>
+          <div class="offer-card-body">
+            <h3>
+              <span class="fr">Poids lourd</span>
+              <span class="en">Heavy-duty</span>
+            </h3>
+            <p class="fr">
+              Carcasses pour poids lourds et bus, adaptées au rechapage ou à la réutilisation
+              directe. Triées par cote et état de carcasse.
+            </p>
+            <p class="en">
+              Casings for trucks and buses, suitable for retreading or direct reuse.
+              Sorted by size and casing condition.
+            </p>
+            <ul class="fr">
+              <li>Carcasses rechapables disponibles</li>
+              <li>Cotes 17.5" à 22.5"</li>
+              <li>En vrac — volumes par conteneur</li>
+            </ul>
+            <ul class="en">
+              <li>Retreadable casings available</li>
+              <li>Sizes 17.5" to 22.5"</li>
+              <li>Loose — volumes per container</li>
+            </ul>
+            <div class="tags">
+              <span class="tag">Truck</span>
+              <span class="tag">Bus</span>
+            </div>
           </div>
         </div>
 
