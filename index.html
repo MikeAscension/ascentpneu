@@ -305,7 +305,7 @@
 
     /* ── HERO ──────────────────────────────────────────────── */
     #hero {
-      background: var(--navy);
+      background: linear-gradient(130deg, var(--blue) 0%, #0d2d6b 55%, var(--navy) 100%);
       padding: 96px 0 80px;
       overflow: hidden;
       position: relative;
@@ -343,6 +343,10 @@
     .hero-visual {
       overflow: hidden;
       aspect-ratio: 4/3;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .hero-visual img {
+      filter: brightness(1.12) contrast(1.05);
     }
 
     /* ── STATS BAR ─────────────────────────────────────────── */
